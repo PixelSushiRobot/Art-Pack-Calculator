@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react'
 import { Sun, Moon } from 'lucide-react'
+import TezFormulaSlider from './tez-formula-slider'
 
 const TezFormulaCalculator: React.FC = () => {
   const [tezAmount, setTezAmount] = useState<number>(35)
@@ -67,17 +68,13 @@ const TezFormulaCalculator: React.FC = () => {
             <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               Tez Amount: {tezAmount.toFixed(2)}
             </label>
-            <input
-              type="range"
-              min="0"
-              max="200"
-              step="0.1"
+            <TezFormulaSlider
+              min={0}
+              max={200}
+              step={0.1}
               value={tezAmount}
               onChange={handleSliderChange}
-              className="w-full h-2 rounded-lg appearance-none cursor-pointer slider"
-              style={{
-                background: `linear-gradient(to right, ${isDarkMode ? '#6366f1' : '#3b82f6'} 0%, ${isDarkMode ? '#6366f1' : '#3b82f6'} ${(tezAmount / 200) * 100}%, ${isDarkMode ? '#374151' : '#e5e7eb'} ${(tezAmount / 200) * 100}%, ${isDarkMode ? '#374151' : '#e5e7eb'} 100%)`
-              }}
+              isDarkMode={isDarkMode}
             />
             <div className={`flex justify-between text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
               <span>0</span>
