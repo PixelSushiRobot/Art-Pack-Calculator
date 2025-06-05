@@ -2,6 +2,8 @@
 
 A React application that calculates the probability of getting an art pack based on the tez amount using the formula P(x) = 1 - e^(-x/σ) \* (1 + x/σ).
 
+🔗 **[Try it out here!](https://pixelsushirobot.github.io/Art-Pack-Calculator)**
+
 ## Features
 
 - Interactive slider to adjust tez amount
