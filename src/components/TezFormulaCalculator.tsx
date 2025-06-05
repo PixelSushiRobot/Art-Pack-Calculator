@@ -65,9 +65,6 @@ const TezFormulaCalculator: React.FC = () => {
         <div className="space-y-6">
           {/* Slider Input */}
           <div className="space-y-2">
-            <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              Tez Amount: {tezAmount.toFixed(2)}
-            </label>
             <TezFormulaSlider
               min={0}
               max={200}
@@ -76,11 +73,6 @@ const TezFormulaCalculator: React.FC = () => {
               onChange={handleSliderChange}
               isDarkMode={isDarkMode}
             />
-            <div className={`flex justify-between text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-              <span>0</span>
-              <span>100</span>
-              <span>200</span>
-            </div>
           </div>
 
           {/* Manual Input */}
