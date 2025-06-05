@@ -1,19 +1,22 @@
 import React from 'react';
 
 interface TezFormulaSliderProps {
+  min: number;
+  max: number;
+  step: number;
   value: number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isDarkMode: boolean;
 }
 
 const TezFormulaSlider: React.FC<TezFormulaSliderProps> = ({
+  min,
+  max,
+  step,
   value,
   onChange,
   isDarkMode
 }) => {
-  const min = 0;
-  const max = 200;
-  const step = 0.1;
 
   return (
     <div className="space-y-2">
