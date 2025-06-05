@@ -2,41 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Slider Styles */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.slider::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.dark .slider::-webkit-slider-thumb {
-  background: #6366f1;
-}
-
-.dark .slider::-moz-range-thumb {
-  background: #6366f1;
-}
-
-.slider::-webkit-slider-thumb {
-  background: #3b82f6;
-}
-
-.slider::-moz-range-thumb {
-  background: #3b82f6;
-}
+/* Dark mode styles */
 
 /* Dark mode styles */
 :root[data-theme="dark"] {
