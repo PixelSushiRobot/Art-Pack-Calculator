@@ -34,13 +34,13 @@ const TezFormulaSlider: React.FC<TezFormulaSliderProps> = ({
           value={value}
           onChange={onChange}
           className={`w-full h-2 rounded-lg appearance-none cursor-pointer slider ${
-            isDarkMode ? "slider-dark" : "slider-light"
+            isDarkMode ? "slider-dark" : ""
           }`}
-          style={
-            {
-              "--slider-value": `${(value / max) * 100}%`,
-            } as React.CSSProperties
-          }
+          ref={(el) => {
+            if (el) {
+              el.style.setProperty("--progress", `${(value / max) * 100}%`);
+            }
+          }}
           title="Tez Amount"
         />
       </label>
